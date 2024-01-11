@@ -1,0 +1,24 @@
+{
+    "name": "Your Name",
+    "bio": "A passionate developer",
+    "skills": ["Python", "Flask", "Jinja2"],
+    "projects": [
+      {
+        "name": "Project 1",
+        "description": "Description of Project 1",
+        "technologies": ["Tech1", "Tech2"],
+        "link": "https://project1.com"
+      },
+      {
+        "name": "Project 2",
+        "description": "Description of Project 2",
+        "technologies": ["Tech3", "Tech4"],
+        "link": "https://project2.com"
+      }
+    ],
+    "contact": {
+      "email": "your@email.com",
+      "linkedin": "https://www.linkedin.com/in/yourprofile"
+    }
+  }
+  
