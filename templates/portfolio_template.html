@@ -7,25 +7,32 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container mt-4">
         <header class="text-center mb-4">
-            <h1>{{ config.name }}</h1>
+            <h1 class="display-4">{{ config.name }}</h1>
             <p class="lead">{{ config.bio }}</p>
         </header>
 
         <section class="mb-4">
-            <h2>Skills</h2>
-            <ul class="list-group">
+            <h2 class="mb-3">Skills</h2>
+            <div class="row">
                 {% for skill in config.skills %}
-                    <li class="list-group-item">{{ skill }}</li>
+                    <div class="col-md-4 mb-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">{{ skill }}</p>
+                            </div>
+                        </div>
+                    </div>
                 {% endfor %}
-            </ul>
+            </div>
         </section>
 
         <section class="mb-4">
-            <h2>Projects</h2>
+            <h2 class="mb-3">Projects</h2>
             <div class="list-group">
                 {% for project in config.projects %}
                     <a href="{{ project.link }}" class="list-group-item list-group-item-action">
@@ -37,13 +44,17 @@
             </div>
         </section>
 
-        <section>
-            <h2>Contact</h2>
+        <section class="mb-4">
+            <h2 class="mb-3">Contact</h2>
             <ul class="list-unstyled">
                 <li>Email: <a href="mailto:{{ config.contact.email }}">{{ config.contact.email }}</a></li>
                 <li>LinkedIn: <a href="{{ config.contact.linkedin }}" target="_blank">{{ config.contact.linkedin }}</a></li>
             </ul>
         </section>
+
+        <div class="text-center mt-4">
+            <a href="#" class="btn btn-primary btn-lg">Download Resume</a>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
