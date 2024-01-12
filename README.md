@@ -1,2 +1,2 @@
 # pyWebSite
-just a cool python project im working on
+just a cool python portfolio 
